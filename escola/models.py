@@ -1,6 +1,7 @@
 from django.db import models
 
-# Criando o modelo de alunos
+# Criando o modelo de alunos e cursos
+# Dps disso essas classses serão serializadas e interpretadas por diferentes arquivos (serializer.py e views.py)
 
 class Aluno(models.Model):
     nome = models.CharField(max_length=30)
