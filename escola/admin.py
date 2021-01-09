@@ -1,5 +1,5 @@
 from django.contrib import admin
-from escola.models import Aluno, Curso
+from escola.models import Aluno, Curso, Matricula
 
 # Mudando a interface do admin
 
@@ -20,3 +20,11 @@ class Cursos(admin.ModelAdmin):
 
 
 admin.site.register(Curso, Cursos)
+
+
+class Matriculas(admin.ModelAdmin):
+    list_display = ('id', 'aluno', 'curso', 'periodo')
+    list_display_links = ('id', )
+
+
+admin.site.register(Matricula, Matriculas)
